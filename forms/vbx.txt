@@ -1,0 +1,216 @@
+; Geometry (twips) and properties of the VBX controls (Threed, MaskEdBox, Gauge, Grid, Spin,
+; Graph) whose properties the decompiler couldn't read back out of the original .FRM files.
+; Positions are ESTIMATED from the labels and frames around each control in the same form.
+; Format: Form Control Index Left Top Width Height [ Prop:Key=Value|Key=Value]
+; Index -1 = the control has no index. Indexed duplicates without an Index in the .FRM are
+; numbered last-listed-first, like the decompiler's arrays.
+
+; ---- Main window (TELELINK.FRM): nine 3-D frames in two columns ----
+Telelink Frame3D1 0 120 60 3255 900
+Telelink Frame3D1 6 3495 60 5235 900
+Telelink Frame3D1 1 120 1080 3255 840
+Telelink Frame3D1 3 3495 1080 5235 840
+Telelink Frame3D1 2 120 2040 3255 840
+Telelink Frame3D1 5 3495 2040 5235 840
+Telelink Frame3D1 4 120 3000 3255 840
+Telelink Frame3D1 7 120 3960 3255 840
+Telelink Frame3D1 8 3495 3960 5235 840
+Telelink lblToday 0 120 120 3015 255
+Telelink lblToday 1 120 360 3015 255
+Telelink lblToday 2 120 600 3015 255
+Telelink lblAlert 0 120 240 4995 255
+Telelink lblAlert 1 120 480 4995 255
+Telelink lblNextRun 0 120 240 4995 255
+Telelink lblNextRun 1 120 480 4995 255
+Telelink lblAnswerSched 0 120 240 4995 255
+Telelink lblAnswerSched 1 120 480 4995 255
+Telelink lblConnection -1 120 180 3375 495
+Telelink cmdAutoCall -1 1800 180 1335 495
+Telelink cmdPhoneType -1 2160 180 975 495
+Telelink cmdAcceptIncoming -1 2160 180 975 495
+Telelink cmdAutoAnswer -1 1800 180 1335 495
+Telelink cmdHangUp -1 3600 180 1455 495 Prop:Visible=0
+Telelink lblAutoCall -1 120 300 1575 375
+Telelink lblAutoAnswer 0 120 300 1575 330
+Telelink lblIncoming -1 120 300 1935 300
+Telelink lblPhoneType -1 120 300 1935 375
+
+; ---- AOS Scripts ----
+frmAOSScript MaskedEdit1 -1 1320 3300 1935 300 Prop:Mask=&-&&&-&&&-&&&&|FontBold=0
+frmAOSScript MaskedEdit2 -1 1320 3660 2295 300 Prop:Mask=&&&&&&&&&&&&&&&&|FontBold=0
+
+; ---- Batch Execute ----
+frmBatchExec Gauge1 -1 120 5160 4095 255 Prop:Visible=0
+frmBatchExec meCallAttempts -1 4200 720 375 300 Prop:Mask=#
+frmBatchExec lblStatus -1 120 5520 4215 195
+
+; ---- Batch Schedule Setup (AutoCall) ----
+frmBatchSchedule frmSchedule -1 120 1020 2760 2580
+frmBatchSchedule chkDayOfWeek 0 120 60 1455 255
+frmBatchSchedule chkDayOfWeek 1 120 420 1455 255
+frmBatchSchedule chkDayOfWeek 2 120 780 1455 255
+frmBatchSchedule chkDayOfWeek 3 120 1140 1455 255
+frmBatchSchedule chkDayOfWeek 4 120 1500 1455 255
+frmBatchSchedule chkDayOfWeek 5 120 1860 1455 255
+frmBatchSchedule chkDayOfWeek 6 120 2220 1455 255
+frmBatchSchedule edtStartTime 0 1740 45 735 285 Prop:Mask=##:##|FontBold=0
+frmBatchSchedule edtStartTime 1 1740 405 735 285 Prop:Mask=##:##|FontBold=0
+frmBatchSchedule edtStartTime 2 1740 765 735 285 Prop:Mask=##:##|FontBold=0
+frmBatchSchedule edtStartTime 3 1740 1125 735 285 Prop:Mask=##:##|FontBold=0
+frmBatchSchedule edtStartTime 4 1740 1485 735 285 Prop:Mask=##:##|FontBold=0
+frmBatchSchedule edtStartTime 5 1740 1845 735 285 Prop:Mask=##:##|FontBold=0
+frmBatchSchedule edtStartTime 6 1740 2205 735 285 Prop:Mask=##:##|FontBold=0
+
+; ---- Call Flags ----
+frmCallFlags gbtnSortCol 0 60 180 2415 240 Prop:Caption=Phone Number (Type-ID)
+frmCallFlags gbtnSortCol 1 2475 180 2055 240 Prop:Caption=Call Flag
+frmCallFlags gbtnSortCol 2 4530 180 2175 240 Prop:Caption=Location
+frmCallFlags gbtnSortCol 3 6705 180 1890 240 Prop:Caption=Date & Time Called
+frmCallFlags meIDBox -1 4800 4260 1215 300 Prop:Mask=######|Visible=0
+
+; ---- CDR working ----
+frmCDRWorking Panel3D1 -1 600 720 5775 375
+
+; ---- Collection Status ----
+frmCollectionStatus meIDBox -1 4560 120 1695 285 Prop:Mask=######
+frmCollectionStatus Frame3D1 -1 120 1560 2460 1095 Prop:Text=Coin Data
+frmCollectionStatus Frame3D2 -1 2700 1560 2460 1095 Prop:Text=Local
+frmCollectionStatus Frame3D3 -1 5280 1560 2400 1095 Prop:Text=Long Distance
+frmCollectionStatus Frame3D4 -1 120 2760 2460 1095 Prop:Text=Operator Assisted
+frmCollectionStatus Frame3D5 -1 2700 2760 2460 1095 Prop:Text=Directory Assistance
+frmCollectionStatus Frame3D6 -1 5280 2760 2400 1095 Prop:Text=Instant Refund
+frmCollectionStatus Frame3D7 -1 120 3960 2460 1095 Prop:Text=950-
+frmCollectionStatus Frame3D8 -1 2700 3960 2460 1095 Prop:Text=1-800-
+frmCollectionStatus Frame3D9 -1 5280 3960 2400 1095 Prop:Text=101-####
+frmCollectionStatus MaskedEdit1 -1 1140 315 1215 285
+frmCollectionStatus MaskedEdit2 -1 1140 675 1215 285
+frmCollectionStatus MaskedEdit3 -1 1140 315 1215 285
+frmCollectionStatus MaskedEdit4 -1 1140 675 1215 285
+frmCollectionStatus MaskedEdit5 -1 1140 315 1215 285
+frmCollectionStatus MaskedEdit6 -1 1140 675 1215 285
+frmCollectionStatus MaskedEdit7 -1 1140 315 1215 285
+frmCollectionStatus MaskedEdit8 -1 1140 675 1215 285
+frmCollectionStatus MaskedEdit9 -1 1140 315 1215 285
+frmCollectionStatus MaskedEdit10 -1 1140 675 1215 285
+frmCollectionStatus MaskedEdit11 -1 1140 315 1215 285
+frmCollectionStatus MaskedEdit12 -1 1140 675 1215 285
+frmCollectionStatus MaskedEdit13 -1 1140 315 1215 285
+frmCollectionStatus MaskedEdit14 -1 1140 675 1215 285
+frmCollectionStatus MaskedEdit15 -1 1140 315 1215 285
+frmCollectionStatus MaskedEdit16 -1 1140 675 1215 285
+frmCollectionStatus MaskedEdit17 -1 1140 315 1215 285
+frmCollectionStatus MaskedEdit18 -1 1140 675 1215 285
+
+; ---- Connect to a Phone ----
+frmConnect mePIC -1 1620 300 735 300 Prop:Mask=####
+frmConnect meOnePlus -1 1620 675 255 300 Prop:Mask=#
+frmConnect meAreaCode -1 1620 1095 495 300 Prop:Mask=###
+frmConnect mePhoneNumber -1 1620 1515 1095 300 Prop:Mask=###-####
+frmConnect meID -1 1620 1935 855 300 Prop:Mask=######
+frmConnect meChinaPhoneNumber -1 480 960 2055 300
+frmConnect meChinaID -1 480 1800 1215 300 Prop:Mask=######
+
+; ---- CSN Entry ----
+frmCSNEntry mePhoneNumber -1 1200 420 2655 300 Prop:MaxLength=16
+frmCSNEntry meInitialAmount -1 840 1920 1335 300 Prop:Mask=$##.##
+frmCSNEntry meInitialPeriod -1 3000 1920 1335 300 Prop:Mask=####
+frmCSNEntry meSecondAmount -1 840 2700 1335 300 Prop:Mask=$##.##
+frmCSNEntry meSecondPeriod -1 3000 2700 1335 300 Prop:Mask=####
+
+; ---- Programmable Features: twelve option frames, four across ----
+frmProgrammableFeatures Frame3D1 0 105 60 2235 1110
+frmProgrammableFeatures Frame3D1 1 2355 60 2235 1110
+frmProgrammableFeatures Frame3D1 2 4605 60 2235 1110
+frmProgrammableFeatures Frame3D1 3 6855 60 2235 1110
+frmProgrammableFeatures Frame3D1 4 105 1230 2235 1110
+frmProgrammableFeatures Frame3D1 5 2355 1230 2235 1110
+frmProgrammableFeatures Frame3D1 6 4605 1230 2235 1110
+frmProgrammableFeatures Frame3D1 7 6855 1230 2235 1110
+frmProgrammableFeatures Frame3D1 8 105 2400 2235 1110
+frmProgrammableFeatures Frame3D1 9 2355 2400 2235 1110
+frmProgrammableFeatures Frame3D1 10 4605 2400 2235 1110
+frmProgrammableFeatures Frame3D1 11 6855 2400 2235 1110
+
+; ---- Firmware ----
+firmware control18 -1 1440 3360 4095 255
+
+; ---- Call Detail Report Generator ----
+frmCDRGenerator meAmount -1 420 930 1335 300 Prop:Mask=###.##
+frmCDRGenerator meFromDate -1 660 330 1215 300 Prop:Mask=##/##/##
+frmCDRGenerator meToDate -1 660 690 1215 300 Prop:Mask=##/##/##
+frmCDRGenerator meSeconds -1 2520 330 435 300 Prop:Mask=###
+frmCDRGenerator meCents -1 1740 810 735 300 Prop:Mask=##
+frmCDRViewer fraCDRv -1 30 0 9525 1380
+frmCDRViewer chkHideRepeats -1 5880 1080 1935 255 Prop:Caption=Hide Repeats
+
+; ---- Get Programmable Feature (value entry) ----
+frmGetProgrammableFeatures MaskedEdit1 -1 1800 2220 1215 300
+frmGetProgrammableFeatures MaskedEdit2 -1 1800 2700 735 300 Prop:Mask=###
+
+; ---- Incoming ----
+frmIncome meIDNumber -1 3240 600 1215 300 Prop:Mask=######
+
+; ---- Incoming Call Schedule Setup (AutoAnswer) ----
+frmIncomingSchedule edtSchedTime 0 3900 825 615 285 Prop:Mask=##:##|FontBold=0
+frmIncomingSchedule edtSchedTime 1 5220 825 615 285 Prop:Mask=##:##|FontBold=0
+frmIncomingSchedule edtSchedTime 2 3900 1425 615 285 Prop:Mask=##:##|FontBold=0
+frmIncomingSchedule edtSchedTime 3 5220 1425 615 285 Prop:Mask=##:##|FontBold=0
+
+; ---- Report Generator ----
+frmReport edtDateRange 0 5280 120 1215 285 Prop:Mask=##/##/##
+frmReport edtDateRange 1 7320 120 1215 285 Prop:Mask=##/##/##
+frmReport Spin1 -1 6420 480 180 255
+frmReport Spin2 -1 7215 480 180 255
+frmReport Graph1 -1 120 1080 9255 3180 Prop:Visible=0
+
+; ---- Scrolling Message ----
+frmScrollIt Gauge1 -1 240 1500 6495 150 Prop:Visible=0
+ScrollIt Gauge1 -1 240 1500 6495 150 Prop:Visible=0
+ScrollIt shpTestBox -1 2220 780 2535 615 Prop:Visible=0
+
+; ---- SMDR ----
+frmSMDR meIDBox -1 6000 120 1215 300 Prop:Mask=######
+
+; ---- Speed Dial ----
+frmSpeedDial MaskedEdit1 0 1680 330 1695 285 Prop:Mask=&-&&&-&&&-&&&&|FontBold=0
+frmSpeedDial MaskedEdit1 1 1680 690 1695 285 Prop:Mask=&-&&&-&&&-&&&&|FontBold=0
+frmSpeedDial MaskedEdit1 2 1680 1050 1695 285 Prop:Mask=&-&&&-&&&-&&&&|FontBold=0
+frmSpeedDial MaskedEdit1 3 1680 1410 1695 285 Prop:Mask=&-&&&-&&&-&&&&|FontBold=0
+frmSpeedDial MaskedEdit1 4 1680 1770 1695 285 Prop:Mask=&-&&&-&&&-&&&&|FontBold=0
+frmSpeedDial MaskedEdit1 5 1680 2130 1695 285 Prop:Mask=&-&&&-&&&-&&&&|FontBold=0
+frmSpeedDial MaskedEdit1 6 1680 2490 1695 285 Prop:Mask=&-&&&-&&&-&&&&|FontBold=0
+frmSpeedDial MaskedEdit1 7 1680 2850 1695 285 Prop:Mask=&-&&&-&&&-&&&&|FontBold=0
+frmSpeedDial MaskedEdit1 8 1680 3210 1695 285 Prop:Mask=&-&&&-&&&-&&&&|FontBold=0
+frmSpeedDial MaskedEdit1 9 1680 3570 1695 285 Prop:Mask=&-&&&-&&&-&&&&|FontBold=0
+
+; ---- System Configuration ----
+frmSysConfig MaskedEdit1 -1 720 240 735 285 Prop:Mask=##
+frmSysConfig Frame3D1 -1 120 3600 3135 855 Prop:Text=Batch Auto-Print
+frmSysConfig chkFlags -1 120 240 1335 255 Prop:Caption=Flags
+frmSysConfig chkMinimum -1 1560 240 1455 255 Prop:Caption=Daily Min.
+frmSysConfig chkUnpolled -1 120 540 1335 255 Prop:Caption=Not Polled
+frmSysConfig chkMonthlyTotals -1 1560 540 1455 255 Prop:Caption=Monthly Totals
+frmSysConfig DCWME -1 840 720 495 285 Prop:Mask=##
+frmSysConfig edtPBX -1 2220 330 735 285 Prop:Mask=####
+frmSysConfig spinDialTime 0 2220 345 255 285
+frmSysConfig spinDialTime 1 2220 705 255 285
+frmSysConfig spinDelay -1 2220 825 255 285
+
+; ---- Phone List ----
+frmPhoneList Grid1 -1 120 960 8775 2895 Prop:FontBold=0
+frmPhoneList Grid2 -1 0 0 0 0 Prop:Visible=0
+frmPhoneList GridX -1 0 0 0 0 Prop:Visible=0
+frmPhoneList meIDBox -1 6720 480 1215 300 Prop:Mask=######
+
+; ---- Rate Table ----
+frmRateTable Gauge1 -1 1080 2640 4095 195 Prop:Visible=0
+
+; ---- Time & Date ----
+frmTimeDate MaskedEdit1 -1 1920 930 1455 300 Prop:Mask=##/##/##
+frmTimeDate MaskedEdit2 -1 1920 1530 1455 300 Prop:Mask=##:##:##
+
+; ---- Phone List Entry ----
+frmUpdatePhoneListEntry MaskedEdit1 -1 360 600 2295 300 Prop:Mask=&-&&&-&&&-&&&&|FontBold=0
+frmUpdatePhoneListEntry MaskedEdit7 -1 360 1560 495 300 Prop:Mask=??|FontBold=0
+frmUpdatePhoneListEntry MaskedEdit2 -1 960 1560 1095 300 Prop:Mask=######|FontBold=0
+frmUpdatePhoneListEntry MaskedEdit8 -1 360 2520 1215 300 Prop:Mask=101-####|FontBold=0

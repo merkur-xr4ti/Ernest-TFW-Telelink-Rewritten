@@ -1,0 +1,22 @@
+[package]
+name = "tfw"
+version = "2.61.0"
+edition = "2024"
+description = "A modern rebuild of the VB3 payphone management program in the TFWSOURCE folder"
+readme = "README.md"
+
+[[bin]]
+name = "tfw"
+path = "src/main.rs"
+
+[dependencies]
+eframe = "0.37"
+image = { version = "0.25", default-features = false, features = ["png"] }
+rfd = "0.15"
+chrono = "0.4"
+serialport = { version = "4", default-features = false }
+md5 = "0.8"
+
+[profile.release]
+opt-level = 2
+strip = true
