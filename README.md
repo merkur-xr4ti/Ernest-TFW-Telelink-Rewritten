@@ -20,6 +20,21 @@ decompiler lost are reconstructed and marked *ESTIMATED* in the code (see "Known
 * **Settings, Reports, Flags**: AutoCall/AutoAnswer schedules, system configuration, the report
   generator with graphs, call detail records, and call flags.
 
+## Screenshots
+
+![Main window](screenshots/main-window.png)
+
+| | |
+|---|---|
+| ![Programmable features, with two options tagged](screenshots/programmable-features.png) | ![System configuration, with the phone line choice](screenshots/settings.png) |
+| Programmable features (tagged options in yellow) | System configuration (modem port or built-in SIP modem) |
+| ![Batch file setup](screenshots/batch-setup.png) | ![Phone list](screenshots/phone-list.png) |
+| Batch file setup | Phone list |
+| ![AOS scripts](screenshots/aos-scripts.png) | ![Connect to a phone](screenshots/connect.png) |
+| AOS scripts | Connect to a phone |
+| ![Speed dial](screenshots/speed-dial.png) | ![About Telelink](screenshots/about.png) |
+| Speed dial | About Telelink |
+
 ## Download
 
 `bin/tfw.exe` is a ready-built 64-bit Windows program: one file, nothing to install. Put it
